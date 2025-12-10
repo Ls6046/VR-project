@@ -12,7 +12,6 @@
     <a-scene id="scene">
       <script src="constants.js"></script>
       <script src="boxSpin.js"></script>
-      <script src="lookingAtBox.js"></script>
       <a-entity environment="preset: starry; lighting: distant; shadowSize: 8"></a-entity>
       <a-entity box-spin 
           id="box" 
@@ -23,6 +22,7 @@
       <a-entity light="type:ambient; color: white;"
           location="0 0 0">
       </a-entity>
+
       <a-entity camera 
                 look-controls
                 id="camera"
@@ -31,14 +31,6 @@
         <a-entity raycaster 
                   objects: .clickable>
         </a-entity>
-              <a-entity box-spin looking-at-box
-                id="box" 
-                geometry="primitive:box"
-                position="0 3 -5"
-                material="color:blue;
-                          src:{Your URL}">
-      </a-entity>
-
       </a-entity>
     </a-scene>
   </body>
