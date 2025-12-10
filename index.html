@@ -10,15 +10,36 @@
   <body>
     <!-- Main scene definition -->
     <a-scene id="scene">
+      <script src="constants.js"></script>
+      <script src="boxSpin.js"></script>
+      <script src="lookingAtBox.js"></script>
       <a-entity environment="preset: starry; lighting: distant; shadowSize: 8"></a-entity>
-      <a-entity id="box" 
+      <a-entity box-spin 
+          id="box" 
           geometry="primitive:box"
           position="0 3 -5"
-          material="color:blue">
+          material="color:blue; src: https://raw.githubusercontent.com/Ls6046/VR-project/refs/heads/main/brickPattern.jpg">
       </a-entity>
       <a-entity light="type:ambient; color: white;"
           location="0 0 0">
       </a-entity>
+      <a-entity camera 
+                look-controls
+                id="camera"
+                position="0 1.5 0"
+                rotation="0 0 0">
+        <a-entity raycaster 
+                  objects: .clickable>
+        </a-entity>
+              <a-entity box-spin looking-at-box
+                id="box" 
+                geometry="primitive:box"
+                position="0 3 -5"
+                material="color:blue;
+                          src:{Your URL}">
+      </a-entity>
 
+      </a-entity>
     </a-scene>
   </body>
+</html>
