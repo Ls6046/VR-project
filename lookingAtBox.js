@@ -1,4 +1,4 @@
-global AFRAME, BOX_SELECTED_COLOR
+/* global AFRAME, BOX_SELECTED_COLOR */
 
 AFRAME.registerComponent('looking-at-box', {
  dependencies: ['raycaster'],
