@@ -1,15 +1,15 @@
-/* global AFRAME, BOX_SELECTED_COLOR */
+/* global AFRAME, BOX_NOT_SELECTED_COLOR */
 
-AFRAME.registerComponent('looking-at-box', {
+AFRAME.registerComponent('not-looking-at-box', {
  dependencies: ['raycaster'],
 
  init: function () {
-   this.el.addEventListener('raycaster-intersected', this.intersected.bind(this))
+   this.el.addEventListener('raycaster-intersected-cleared', this.intersected.bind(this))
  },
 
  intersected: function () {
    let material = this.el.getAttribute('material')
-   material.color = BOX_SELECTED_COLOR
+   material.color = BOX_NOT_SELECTED_COLOR
    this.el.setAttribute('material', material)
  }
 
