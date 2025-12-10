@@ -1,4 +1,4 @@
-/* global AFRAME, BOX_NOT_SELECTED_COLOR */
+AFRAME, BOX_NOT_SELECTED_COLOR
 
 AFRAME.registerComponent('not-looking-at-box', {
  dependencies: ['raycaster'],
