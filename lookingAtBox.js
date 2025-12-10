@@ -12,7 +12,6 @@ AFRAME.registerComponent('looking-at-box', {
    let material = this.el.getAttribute('material')
    material.color = BOX_SELECTED_COLOR
    this.el.setAttribute('material', material)
-   console.log('Raycaster hit the box!');
  }
   
 });
