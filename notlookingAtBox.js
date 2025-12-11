@@ -8,7 +8,7 @@ AFRAME.registerComponent('not-looking-at-box', {
    this.el.addEventListener('raycaster-intersected-cleared', this.intersected.bind(this))
  },
   
- intersectedcleared: function () {
+ intersectedCleared: function () {
    let material = this.el.getAttribute('material')
    material.color = BOX_NOT_SELECTED_COLOR
    this.el.setAttribute('material', material)
