@@ -5,7 +5,7 @@ AFRAME.registerComponent('not-looking-at-box', {
  dependencies: ['raycaster'],
 
  init: function () {
-   this.el.addEventListener('raycaster-intersected-cleared', this.intersected.bind(this))
+   this.el.addEventListener('raycaster-intersected-cleared', this.intersectedCleared.bind(this))
  },
   
  intersectedCleared: function () {
