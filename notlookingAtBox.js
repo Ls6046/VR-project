@@ -9,9 +9,7 @@ AFRAME.registerComponent('not-looking-at-box', {
  },
   
  intersectedCleared: function () {
-   let material = this.el.getAttribute('material')
-   material.color = BOX_NOT_SELECTED_COLOR
-   this.el.setAttribute('material', material)
+   this.el.setAttribute('material', 'color', BOX_NOT_SELECTED_COLOR)
  }
   
 });
